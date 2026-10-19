@@ -162,11 +162,71 @@ main{
 }
 .services{
    padding: 3rem;
-   margin: 3rem;
+   margin-top: 10rem;
 }
 .services h1{
    text-align: center;
    color: #ff8c32;
    font-size: 8rem;
    text-decoration: underline;
+}
+.services .pro{
+   text-align: center;
+   font-size: 4.5rem;
+   color: #ffffff;
+   margin-top: 3rem;
+}
+.service-card{
+   display: grid;
+   grid-template-columns: 1;
+}
+.service-card{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 4rem;
+   max-width: 160rem;
+   margin: 4rem auto 0;
+}
+.service-card .card{
+   background: #111c30;
+   padding: 3rem;
+   border: 1px solid rgba(255, 255, 255, 0.15);
+   border-radius: 18px;
+   background: linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02));
+   backdrop-filter: blur(1.2rem);
+   -webkit-backdrop-filter: blur(1.2rem);
+   box-shadow: 0px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+   transition: all 0.3s ease;
+}
+.service-card .card:hover{
+   transform: translateY(-8px);
+   border-color: rgba(255, 140, 50,   0.7);
+   box-shadow: 0, 12px 35px rgba(255, 140, 50, 0.12)  inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+.service-card .card i{
+  color: #a7b0c0;
+  font-size: 5rem;
+  margin: 2rem;
+}
+.service-card .card h3{
+   font-size: 3rem;
+   color: #ff8c32;
+   margin-bottom: 2rem;
+}
+.service-card .card  p{
+   color: white;
+   font-size: 2rem;
+}
+.example p{
+   margin-top: 1.5rem;
+}
+.service-card .card p .check {
+   display: inline-flex;
+   width: 24px;
+   height: 24px;
+   border: 2px solid green;
+   border-radius: 50%;
+   align-items: center;
+   justify-content: center;
+   color: green;
 }
