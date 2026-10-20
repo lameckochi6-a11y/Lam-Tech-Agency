@@ -167,7 +167,7 @@ main{
 .services h1{
    text-align: center;
    color: #ff8c32;
-   font-size: 8rem;
+   font-size: 5rem;
    text-decoration: underline;
 }
 .services .pro{
@@ -222,11 +222,389 @@ main{
 }
 .service-card .card p .check {
    display: inline-flex;
-   width: 24px;
-   height: 24px;
+   width: 2.4rem;
+   height: 2.4rem;
    border: 2px solid green;
    border-radius: 50%;
    align-items: center;
    justify-content: center;
    color: green;
+}
+.card a{
+   text-decoration: none;
+  
+}
+.card-btn{
+   background: orangered;
+   padding: 1rem;
+   color: #080b12;
+   font-size: 2rem;
+   font-weight: 600;
+   display: block;
+   width: fit-content;
+   margin: 3rem auto 0;
+   border: none;
+   border-radius: 12px;
+   transition: 0.3s ease;
+}
+.card-btn:hover{
+   background: transparent;
+   color: #ffffff;
+   box-shadow: 2px 4px 6px floralwhite;
+}
+.projects h2{
+   font-size: 4rem;
+   color: #ff8c32;
+   text-align: center;
+   margin-top: 2rem;
+}
+.projects .descrip{
+   color: #ffffff;
+   font-size: 3rem;
+   text-align: center;
+   margin: 2rem;
+}
+/* Projects section */
+.projects {
+   
+   text-align: center;
+}
+
+.projects-main {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 12rem;
+   text-align: left;
+   max-width: 1000px;
+   margin:3rem auto;
+   margin-top: 3rem;
+}
+
+.project-card {
+   margin-top: 3rem;
+   border-radius: 12px;
+   overflow: hidden;
+   background: white;
+   box-shadow: 0 5px 18px burlywood;
+   transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+   transform: translateY(-6px);
+   box-shadow: 0 14px 30px lightskyblue;
+}
+
+/* Image area — narrow width, tall height (portrait) */
+.project-image {
+   position: relative;
+   width: 100%;
+   aspect-ratio: 3 / 4;
+   overflow: hidden;
+   background: #0b1a33;
+}
+
+.photo {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   opacity: 0;
+   will-change: opacity, transform, filter;
+}
+
+/* Pause the slideshow while hovering so the overlay sits on a still photo */
+.project-image:hover .photo {
+   animation-play-state: paused;
+}
+
+/* ============================================================
+   CARD 1 — Slow soft crossfade  (9s cycle)
+   ============================================================ */
+.card-1 .photo {
+   animation: fadeSoft 9s infinite;
+}
+
+.card-1 .photo1 {
+   animation-delay: 0s;
+}
+
+.card-1 .photo2 {
+   animation-delay: 3s;
+}
+
+.card-1 .photo3 {
+   animation-delay: 6s;
+}
+
+@keyframes fadeSoft {
+   0% {
+      opacity: 0;
+   }
+
+   3% {
+      opacity: 1;
+   }
+
+   30% {
+      opacity: 1;
+   }
+
+   33.33% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+/* ============================================================
+   CARD 2 — Slide up + fade  (6s cycle, offset start)
+   ============================================================ */
+.card-2 .photo {
+   animation: slideUp 6s infinite;
+}
+
+.card-2 .photo1 {
+   animation-delay: 1s;
+}
+
+.card-2 .photo2 {
+   animation-delay: 3s;
+}
+
+.card-2 .photo3 {
+   animation-delay: 5s;
+}
+
+@keyframes slideUp {
+   0% {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+
+   6% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+
+   30% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+
+   36% {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+
+   100% {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+}
+
+/* ============================================================
+   CARD 3 — Zoom-out fade  (8s cycle, cinematic)
+   ============================================================ */
+.card-3 .photo {
+   animation: zoomFade 8s infinite;
+}
+
+.card-3 .photo1 {
+   animation-delay: 0.5s;
+}
+
+.card-3 .photo2 {
+   animation-delay: 3.16s;
+}
+
+.card-3 .photo3 {
+   animation-delay: 5.83s;
+}
+
+@keyframes zoomFade {
+   0% {
+      opacity: 0;
+      transform: scale(1.15);
+   }
+
+   5% {
+      opacity: 1;
+      transform: scale(1);
+   }
+
+   30% {
+      opacity: 1;
+      transform: scale(1);
+   }
+
+   36% {
+      opacity: 0;
+      transform: scale(0.95);
+   }
+
+   100% {
+      opacity: 0;
+      transform: scale(0.95);
+   }
+}
+
+/* ============================================================
+   CARD 4 — Blur fade  (11s cycle, longest rhythm)
+   ============================================================ */
+.card-4 .photo {
+   animation: blurFade 11s infinite;
+}
+
+.card-4 .photo1 {
+   animation-delay: 2s;
+}
+
+.card-4 .photo2 {
+   animation-delay: 5.66s;
+}
+
+.card-4 .photo3 {
+   animation-delay: 9.33s;
+}
+
+@keyframes blurFade {
+   0% {
+      opacity: 0;
+      filter: blur(10px);
+   }
+
+   5% {
+      opacity: 1;
+      filter: blur(0);
+   }
+
+   31% {
+      opacity: 1;
+      filter: blur(0);
+   }
+
+   37% {
+      opacity: 0;
+      filter: blur(10px);
+   }
+
+   100% {
+      opacity: 0;
+      filter: blur(10px);
+   }
+}
+
+/* ============================================================
+   Hover overlay
+   ============================================================ */
+.project-overlay {
+   position: absolute;
+   inset: 0;
+   z-index: 2;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   text-align: center;
+   color: white;
+   background: rgba(5, 20, 45, 0.85);
+   opacity: 0;
+   transition: opacity 0.4s ease;
+}
+
+.project-overlay h3,
+.project-overlay p,
+.project-overlay .project-btn {
+   transform: translateY(10px);
+   transition: transform 0.4s ease;
+}
+
+.project-image:hover .project-overlay {
+   opacity: 1;
+}
+
+.project-image:hover .project-overlay h3,
+.project-image:hover .project-overlay p,
+.project-image:hover .project-overlay .project-btn {
+   transform: translateY(0);
+}
+
+.project-overlay h3 {
+   margin-bottom: 10px;
+   font-size: 4.5rem;
+   color: #ff8c32;
+   margin-bottom: 2rem;
+}
+
+.project-overlay p {
+   margin-bottom: 18px;
+   line-height: 1.5;
+   max-width: 90%;
+   font-size: 2.5rem;
+}
+
+.project-btn {
+   display: inline-block;
+   font-size: 1.6rem;
+   padding: 1rem 1.8rem;
+   border-radius: 6px;
+   background: #ff6b35;
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   transition: background 0.3s ease;
+}
+
+.project-btn:hover {
+   background: #0b1a33;
+   color: #ff8c32;
+   border: 2px solid #ff6b35;
+   box-shadow: 2px 3px 6px wheat;
+}
+
+@media (max-width: 900px) {
+   .projects {
+      padding: 5rem 6%;
+   }
+
+   .projects-main {
+      gap: 2rem;
+   }
+}
+
+@media (max-width: 600px) {
+   .projects {
+      padding: 40px 5%;
+   }
+
+   .projects-main {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+   }
+
+   .project-image {
+      aspect-ratio: 4 / 5;
+      max-height: 520px;
+   }
+
+   .project-overlay {
+      opacity: 1;
+      justify-content: flex-end;
+      background: linear-gradient(to top,
+            rgba(5, 20, 45, 0.9) 0%,
+            rgba(5, 20, 45, 0.55) 45%,
+            rgba(5, 20, 45, 0) 100%);
+      padding: 16px;
+   }
+
+   .project-overlay h3,
+   .project-overlay p,
+   .project-overlay .project-btn {
+      transform: none;
+   }
 }
