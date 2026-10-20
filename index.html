@@ -16,14 +16,17 @@
          <p>WEB SOLUTIONS</p>
       </div>
      </div>
-      <nav>
-         <a href="#home" class="nav-link">Home</a>
-         <a href="#services" class="nav-link">Services</a>
-         <a href="#projects" class="nav-link">Projects</a>
-         <a href="#about" class="nav-link">About</a>
-         <a href="#contacts" class="nav-link">Contact</a>
-         <a href="https://wa.me/254764959436" target="_blank"><button><i class="fa-regular fa-comments"></i>Lets Talk</button></a>
-      </nav>
+   <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+   </button>
+   <nav id="mainNav">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contacts" class="nav-link">Contact</a>
+      <a href="https://wa.me/254764959436" target="_blank"><button><i class="fa-regular fa-comments"></i>Le'ts Talk</button></a>
+   </nav>
    </header>
    <main>
       <section id="home" class="home">
@@ -217,8 +220,18 @@
       </p>
    </footer>
 </div>
-
       </section>
    </main>
+   <script>
+    const hamburger = document.getElementById('hamburgerBtn');
+    const nav = document.getElementById('mainNav');
+    const icon = hamburger.querySelector('i');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+  </script>
 </body>
 </html>
