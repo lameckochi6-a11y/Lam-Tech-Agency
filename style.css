@@ -294,7 +294,6 @@ main{
    box-shadow: 0 14px 30px lightskyblue;
 }
 
-/* Image area — narrow width, tall height (portrait) */
 .project-image {
    position: relative;
    width: 100%;
@@ -359,10 +358,6 @@ main{
       opacity: 0;
    }
 }
-
-/* ============================================================
-   CARD 2 — Slide up + fade  (6s cycle, offset start)
-   ============================================================ */
 .card-2 .photo {
    animation: slideUp 6s infinite;
 }
@@ -406,9 +401,6 @@ main{
    }
 }
 
-/* ============================================================
-   CARD 3 — Zoom-out fade  (8s cycle, cinematic)
-   ============================================================ */
 .card-3 .photo {
    animation: zoomFade 8s infinite;
 }
@@ -452,9 +444,6 @@ main{
    }
 }
 
-/* ============================================================
-   CARD 4 — Blur fade  (11s cycle, longest rhythm)
-   ============================================================ */
 .card-4 .photo {
    animation: blurFade 11s infinite;
 }
@@ -497,10 +486,6 @@ main{
       filter: blur(10px);
    }
 }
-
-/* ============================================================
-   Hover overlay
-   ============================================================ */
 .project-overlay {
    position: absolute;
    inset: 0;
@@ -607,4 +592,95 @@ main{
    .project-overlay .project-btn {
       transform: none;
    }
+}.about{
+   margin-top: 3rem;
+   padding: 3rem;
+}
+.about h2{
+   color: #ff8c32;
+   font-size: 4rem;
+   text-align: center;
+}
+.about-par{
+   text-align: center;
+   margin: 2rem;
+   color: #ffffff;
+   font-size: 3rem;
+}
+.about-middle{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   justify-content: center;
+   gap: 6rem;
+}
+.mid{
+   display: block;
+   justify-content: center;
+   padding: 3rem;
+   align-items: center;
+}
+.mid h3{
+   color: yellowgreen;
+   font-size: 4rem;
+   margin: 2rem 0;
+
+}
+.mid p{
+   color: #ffffff;
+   font-size: 2rem;
+}
+.mid img{
+   width: 50rem;
+   height: 50rem;
+   border-radius: 50%;
+   margin: 3rem;
+   transition: 0.4s ease;
+}
+.mid img:hover{
+   border: 3px blueviolet solid;
+   box-shadow: 5px 5px 10px lemonchiffon;
+}
+.why-card{
+   width: 100%;
+   background:  #080b12;
+   padding: 2rem;
+   border-radius: 10px;
+   border: 1px #ff6b35 solid;
+}
+.why-card h4{
+   font-size: 3rem;
+   color: #ff8c32;
+   margin: 2rem;
+}
+.why-card p{
+   color: #ffffff;
+   font-size: 2rem;
+}
+.any{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 5rem;
+   margin-top: 3rem;
+}
+.any .any-card{
+   padding: 1rem;
+   background: #15243a;
+   border-radius: 12px;
+   transition: 0.3s ease;
+}
+.any .any-card:hover{
+   transform: translateY(-8px);
+   box-shadow: 3px 3px 8px lemonchiffon;
+   background: black;
+}
+.any .any-card h5{
+   font-size: 3rem;
+   color: #ffffff;
+   text-align: center;
+   line-height: 1.5;
+}
+.any .any-card h5 i{
+   color: #ff8c32;
+   font-size: 4rem;
+   margin: 2rem;
 }
